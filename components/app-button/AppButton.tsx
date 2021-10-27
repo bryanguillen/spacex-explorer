@@ -2,7 +2,7 @@ import React from 'react';
 
 import './AppButton.css';
 
-interface AppButtonInterface {
+interface AppButtonProps {
   text: string
   variant: 'welcome' | 'primary'
 }
@@ -10,7 +10,7 @@ interface AppButtonInterface {
 const AppButton = ({
   text,
   variant
-}: AppButtonInterface) => {
+}: AppButtonProps) => {
   return (
     <button className={`app-button app-button-${variant}`}>{text}</button>
   );
