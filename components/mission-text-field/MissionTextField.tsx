@@ -3,8 +3,8 @@ import React from 'react';
 import './MissionTextField.css';
 
 interface MissionTextFieldProps {
-  name: string;
-  value: string;
+  name: string
+  value: string
 }
 
 const MissionTextField = ({
