@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import './AppButton.css';
 
@@ -7,10 +7,10 @@ interface AppButtonInterface {
   variant: 'welcome' | 'primary'
 }
 
-const AppButton: FC<AppButtonInterface> = ({
+const AppButton = ({
   text,
   variant
-}) => {
+}: AppButtonInterface) => {
   return (
     <button className={`app-button app-button-${variant}`}>{text}</button>
   );
