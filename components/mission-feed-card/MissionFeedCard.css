@@ -1,0 +1,19 @@
+.mission-feed-card {
+  background-color: #161B22;
+  border: #30363D solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.mission-feed-card-button-container {
+  text-align: right;
+}
+
+.mission-feed-card-field {
+  margin-bottom: 10px;
+}
+
+.mission-feed-card-name {
+  color: #C9D1D9;
+  font-size: 24px;
+}
