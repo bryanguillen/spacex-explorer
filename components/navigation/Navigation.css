@@ -1,5 +1,4 @@
 .navigation-footer {
-  background-color: #161B22;
   display: flex;
   justify-content: center;
   padding: 5px;
@@ -15,7 +14,34 @@
 }
 
 .navigation-footer-text {
-  color: #C9D1D9;
   font-size: 12px;
   margin-top: 5px;
+}
+
+.navigation-side {
+  padding: 10px;
+}
+
+.navigation-side-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.navigation-side-text {
+  flex: 1;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.navigation-footer,
+.navigation-side {
+  background-color: #161B22;
+}
+
+.navigation-footer-text,
+.navigation-side-text {
+  color: #C9D1D9;
 }
