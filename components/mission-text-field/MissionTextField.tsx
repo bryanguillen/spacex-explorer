@@ -2,17 +2,19 @@ import React from 'react';
 
 import './MissionTextField.css';
 
-interface MissionTextFieldProps {
+export interface MissionTextFieldProps {
+  className?: string
   name: string
   value: string
 }
 
 const MissionTextField = ({
   name,
-  value
+  value,
+  className
 }: MissionTextFieldProps) => {
   return (
-    <div className="mission-text-field">
+    <div className={`mission-text-field ${className ? className : ''}`}>
       <span className="mission-text-field-name">{name}</span>: {value}
     </div>
   );
