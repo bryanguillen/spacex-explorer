@@ -1,0 +1,44 @@
+.app-template-navigation-footer-container {
+  bottom: 0;
+  position: fixed;
+  height: 65px;
+  width: 100%;
+}
+
+.app-template-navigation-side-container {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .app-template-content-container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .app-template-navigation-empty {
+    flex: 1;
+  }
+
+  .app-template-navigation-footer-container {
+    display: none;
+  }
+
+  .app-template-navigation-side-container {
+    background-color: #161B22;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 250px;
+  }
+
+  .app-template-navigation-side-container .navigation-side {
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .app-template-route-content-container {
+    flex: 1;
+    max-width: 600px;
+  }
+}
