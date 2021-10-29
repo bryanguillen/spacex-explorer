@@ -55,6 +55,4 @@ const NavigationFooter = ({
   );
 };
 
-export {
-  NavigationFooter
-};
+export default NavigationFooter;
