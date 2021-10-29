@@ -1,12 +1,9 @@
 .app-template-navigation-footer-container {
+  background-color: #161B22;
   bottom: 0;
   position: fixed;
   height: 65px;
   width: 100%;
-}
-
-.app-template-navigation-side-container {
-  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -20,18 +17,15 @@
   }
 
   .app-template-navigation-footer-container {
-    display: none;
-  }
-
-  .app-template-navigation-side-container {
-    background-color: #161B22;
+    position: static;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    height: auto;
     width: 250px;
   }
 
-  .app-template-navigation-side-container .navigation-side {
+  .app-template-navigation-footer-container .navigation-side {
     flex-shrink: 0;
     position: sticky;
     top: 0;

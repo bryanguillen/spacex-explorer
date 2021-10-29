@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { NavigationFooter, NavigationSide, NavigationProps } from '../components/shared/navigation/Navigation';
+import { NavigationFooter, NavigationProps } from '../components/shared/navigation/Navigation';
 
 import './AppTemplate.css';
 
@@ -17,8 +17,8 @@ const AppTemplate: FC<AppTemplateProps> = ({
   return (
     <div className="app-template">
       <div className="app-template-content-container">
-        <div className="app-template-navigation-side-container">
-          <NavigationSide
+        <div className="app-template-navigation-footer-container">
+          <NavigationFooter
             historyButtonText={historyButtonText}
             homeButtonText={homeButtonText}
             upcomingButtonText={upcomingButtonText}
@@ -28,13 +28,6 @@ const AppTemplate: FC<AppTemplateProps> = ({
         <div className="app-template-route-content-container">
           {children}
         </div>
-      </div>
-      <div className="app-template-navigation-footer-container">
-        <NavigationFooter
-          historyButtonText={historyButtonText}
-          homeButtonText={homeButtonText}
-          upcomingButtonText={upcomingButtonText}
-        />
       </div>
     </div>
   );
