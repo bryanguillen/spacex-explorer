@@ -1,6 +1,6 @@
 import React from 'react';
-import AppButton from '../app-button/AppButton';
-import MissionTextField, { MissionTextFieldProps } from '../mission-text-field/MissionTextField';
+import AppButton from '../../shared/app-button/AppButton';
+import MissionTextField, { MissionTextFieldProps } from '../../shared/mission-text-field/MissionTextField';
 import truncateDetails from './truncate-details';
 
 import './MissionFeedCard.css';

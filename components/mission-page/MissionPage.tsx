@@ -1,7 +1,7 @@
 import React from "react";
-import MissionImage from "../mission-image/MissionImage";
-import MissionTextField, { MissionTextFieldProps } from "../mission-text-field/MissionTextField";
-import PageHeader from "../page-header/PageHeader";
+import MissionImage from "./mission-image/MissionImage";
+import MissionTextField, { MissionTextFieldProps } from "../shared/mission-text-field/MissionTextField";
+import PageHeader from "../shared/page-header/PageHeader";
 
 import './MissionPage.css';
 

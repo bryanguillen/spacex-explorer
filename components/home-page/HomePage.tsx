@@ -1,6 +1,6 @@
 import React from 'react';
-import AppButton from '../app-button/AppButton';
-import PageHeader from '../page-header/PageHeader';
+import AppButton from '../shared/app-button/AppButton';
+import PageHeader from '../shared/page-header/PageHeader';
 
 import './HomePage.css';
 

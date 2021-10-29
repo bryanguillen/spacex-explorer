@@ -1,6 +1,6 @@
 import React from "react";
-import MissionFeedCard, { MissionFeedCardProps } from "../mission-feed-card/MissionFeedCard";
-import PageHeader from "../page-header/PageHeader";
+import MissionFeedCard, { MissionFeedCardProps } from "./mission-feed-card/MissionFeedCard";
+import PageHeader from "../shared/page-header/PageHeader";
 
 import './HistoryPage.css';
 
