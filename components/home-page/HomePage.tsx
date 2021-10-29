@@ -1,5 +1,6 @@
 import React from 'react';
 import AppButton from '../app-button/AppButton';
+import PageHeader from '../page-header/PageHeader';
 
 import './HomePage.css';
 
@@ -15,7 +16,10 @@ const HomePage = ({
   return (
     <div className="home-page">
       <div className="home-page-content-container">
-        <h1 className="home-page-welcome-header">{welcomeHeaderText}</h1>
+        <PageHeader
+          className="home-page-welcome-header"
+          value={welcomeHeaderText}
+        />
         <AppButton text={welcomeButtonText} variant="welcome"/>
       </div>
     </div>
