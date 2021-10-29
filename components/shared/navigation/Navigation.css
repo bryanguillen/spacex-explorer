@@ -1,4 +1,4 @@
-.navigation-footer {
+.navigation {
   background-color: #161B22;
   display: flex;
   height: 65px; /* HACK: Same as app-template */
@@ -6,7 +6,7 @@
   padding: 5px;
 }
 
-.navigation-footer-button {
+.navigation-button {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -15,25 +15,25 @@
   width: 33%;
 }
 
-.navigation-footer-text {
+.navigation-text {
   font-size: 12px;
   margin-top: 5px;
 }
 
 @media only screen and (min-width: 768px) {
-  .navigation-footer {
+  .navigation {
     display: block;
     height: auto;
     padding: 10px;
   }
 
-  .navigation-footer-button {
+  .navigation-button {
     flex-direction: row;
     margin-bottom: 10px;
     width: 100%;
   }
 
-  .navigation-footer-text {
+  .navigation-text {
     flex: 1;
     font-size: 16px;
     margin-left: 10px;

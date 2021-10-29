@@ -17,7 +17,7 @@ const AppTemplate: FC<AppTemplateProps> = ({
   return (
     <div className="app-template">
       <div className="app-template-content-container">
-        <div className="app-template-navigation-footer-container">
+        <div className="app-template-navigation-container">
           <Navigation
             historyButtonText={historyButtonText}
             homeButtonText={homeButtonText}

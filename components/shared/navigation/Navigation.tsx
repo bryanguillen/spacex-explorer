@@ -20,7 +20,7 @@ const NavigationText = ({
   buttonText
 }: NavigationTextProps) => {
   return (
-    <span className="navigation-footer-text dark-mode-font-color">{buttonText}</span>
+    <span className="navigation-text dark-mode-font-color">{buttonText}</span>
   );
 };
 
@@ -31,20 +31,20 @@ const Navigation = ({
 }: NavigationProps) => {
   return (
     <IconContext.Provider value={iconsStyles}>
-      <div className="navigation-footer">
-        <div className="navigation-footer-button" role="button">
+      <div className="navigation">
+        <div className="navigation-button" role="button">
           <MdHome/>
           <NavigationText
             buttonText={homeButtonText}
           />
         </div>
-        <div className="navigation-footer-button" role="button">
+        <div className="navigation-button" role="button">
           <MdHistory/>
           <NavigationText
             buttonText={historyButtonText}
           />
         </div>
-        <div className="navigation-footer-button" role="button">
+        <div className="navigation-button" role="button">
           <MdUpcoming/>
           <NavigationText
             buttonText={upcomingButtonText}
