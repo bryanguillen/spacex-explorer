@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './PageHeader.css';
-
 export interface PageHeaderProps {
   className?: string
   value: string
@@ -12,7 +10,7 @@ const PageHeader = ({
   value
 }: PageHeaderProps) => {
   return (
-    <h1 className={`page-header ${className ? className : ''}`}>{value}</h1>
+    <h1 className={`dark-mode-font-color ${className ? className : ''}`}>{value}</h1>
   );
 };
 

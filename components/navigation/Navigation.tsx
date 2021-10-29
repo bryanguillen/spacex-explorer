@@ -4,7 +4,7 @@ import { MdHome, MdHistory, MdUpcoming } from 'react-icons/md';
 
 import './Navigation.css';
 
-const iconsStyles = { color: '#C9D1D9', size: '2rem' };
+const iconsStyles = { className: 'dark-mode-font-color', size: '2rem' };
 
 interface NavigationProps {
   historyButtonText: string
@@ -20,7 +20,7 @@ const NavigationFooterText = ({
   buttonText
 }: NavigationTextProps) => {
   return (
-    <span className="navigation-footer-text">{buttonText}</span>
+    <span className="navigation-footer-text dark-mode-font-color">{buttonText}</span>
   );
 };
 
@@ -59,7 +59,7 @@ const NavigationSideText = ({
   buttonText
 }: NavigationTextProps) => {
   return (
-    <span className="navigation-side-text">{buttonText}</span>
+    <span className="navigation-side-text dark-mode-font-color">{buttonText}</span>
   );
 };
 

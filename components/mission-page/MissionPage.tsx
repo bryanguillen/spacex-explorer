@@ -32,7 +32,7 @@ const MissionPage = ({
       <MissionImage
         imageUrl={imageUrl}
       />
-      <h2 className="mission-page-fields-section-header">{fieldsSectionHeader}</h2>
+      <h2 className="dark-mode-font-color mission-page-fields-section-header">{fieldsSectionHeader}</h2>
       <MissionTextField
         className="mission-page-text-field"
         name={date.name}

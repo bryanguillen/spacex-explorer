@@ -21,7 +21,7 @@ const MissionFeedCard = ({
 }: MissionFeedCardProps) => {
   return (
     <div className={`mission-feed-card ${className ? className : ''}`}>
-      <div className="mission-feed-card-field mission-feed-card-name">{missionName}</div>
+      <div className="mission-feed-card-field mission-feed-card-name dark-mode-font-color">{missionName}</div>
       <MissionTextField className="mission-feed-card-field" name={missionDate.name} value={missionDate.value}/>
       <MissionTextField className="mission-feed-card-field" name={missionDetails.name} value={missionDetails.value}/>
       <div className="mission-feed-card-button-container">
