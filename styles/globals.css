@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.dark-mode-font-color {
+  color: #C9D1D9;
+}
