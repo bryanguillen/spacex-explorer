@@ -1,5 +1,6 @@
 .navigation-footer {
   display: flex;
+  height: 65px; /* HACK: Same as app-template */
   justify-content: center;
   padding: 5px;
 }
