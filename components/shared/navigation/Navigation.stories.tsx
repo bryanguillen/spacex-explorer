@@ -1,15 +1,15 @@
 import React from 'react'
-import NavigationFooter from './Navigation';
+import Navigation from './Navigation';
 
 export default {
-  title: 'Components/NavigationFooter',
-  component: NavigationFooter
+  title: 'Components/Navigation',
+  component: Navigation
 };
 
 // Note: Use wrapper div to cap out width for element
-export const NavigationFooterStory = () => (
+export const NavigationStory = () => (
   <div style={{ maxWidth: '600px' }}>
-    <NavigationFooter
+    <Navigation
       historyButtonText="Past Missions"
       homeButtonText="Home"
       upcomingButtonText="Upcoming"
