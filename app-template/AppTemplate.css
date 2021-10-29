@@ -12,10 +12,6 @@
     min-height: 100vh;
   }
 
-  .app-template-navigation-empty {
-    flex: 1;
-  }
-
   .app-template-navigation-container {
     position: static;
     display: flex;
@@ -29,6 +25,10 @@
     flex-shrink: 0;
     position: sticky;
     top: 0;
+  }
+
+  .app-template-navigation-empty {
+    flex: 1;
   }
 
   .app-template-route-content-container {
