@@ -11,6 +11,7 @@ export interface MissionFeedCardProps {
   missionDate: MissionTextFieldProps
   missionDetails: MissionTextFieldProps
   readMoreText: string
+  missionId: number
 }
 
 const MissionFeedCard = ({

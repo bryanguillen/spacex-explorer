@@ -19,15 +19,16 @@ const HistoryPage = ({
         className="history-page-header"
         value={pageHeader}
       />
-      {missions.map((mission: MissionFeedCardProps, index: number) => {
-        const { missionDate, missionDetails, missionName } = mission;
+      {missions.map((mission: MissionFeedCardProps) => {
+        const { missionDate, missionDetails, missionName, missionId } = mission;
         return (
           <MissionFeedCard
             className="history-page-feed-card"
-            key={index}
+            key={missionId}
             missionDate={missionDate}
             missionDetails={missionDetails}
             missionName={missionName}
+            missionId={missionId}
             readMoreText="Read More"
           />
         );
