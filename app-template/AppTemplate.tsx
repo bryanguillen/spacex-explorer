@@ -15,16 +15,20 @@ const AppTemplate: FC<AppTemplateProps> = ({
   upcomingButtonText
 }) => {
   return (
-    <div className="app-template">
+    <div className={`app-template ${isHomePage ? 'app-template-home-page' : ''}`}>
       <div className="app-template-content-container">
-        <div className="app-template-navigation-container">
-          <Navigation
-            historyButtonText={historyButtonText}
-            homeButtonText={homeButtonText}
-            upcomingButtonText={upcomingButtonText}
-          />
-          <div className="app-template-navigation-empty"></div>
-        </div>
+        {
+          !isHomePage ? 
+            <div className="app-template-navigation-container">
+              <Navigation
+                historyButtonText={historyButtonText}
+                homeButtonText={homeButtonText}
+                upcomingButtonText={upcomingButtonText}
+              />
+              <div className="app-template-navigation-empty"></div>
+            </div> :
+            null
+        }
         <div className="app-template-route-content-container">
           {children}
         </div>
