@@ -4,7 +4,8 @@ import MissionTextField, { MissionTextFieldProps } from '../mission-text-field/M
 
 import './MissionFeedCard.css';
 
-interface MissionFeedCardProps {
+export interface MissionFeedCardProps {
+  className?: string
   missionName: string
   missionDate: MissionTextFieldProps
   missionDetails: MissionTextFieldProps
@@ -12,13 +13,14 @@ interface MissionFeedCardProps {
 }
 
 const MissionFeedCard = ({
+  className,
   missionName,
   missionDate,
   missionDetails,
   readMoreText
 }: MissionFeedCardProps) => {
   return (
-    <div className="mission-feed-card">
+    <div className={`mission-feed-card ${className ? className : ''}`}>
       <div className="mission-feed-card-field mission-feed-card-name">{missionName}</div>
       <MissionTextField className="mission-feed-card-field" name={missionDate.name} value={missionDate.value}/>
       <MissionTextField className="mission-feed-card-field" name={missionDetails.name} value={missionDetails.value}/>
