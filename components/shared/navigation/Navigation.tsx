@@ -16,7 +16,7 @@ interface NavigationTextProps {
   buttonText: string
 }
 
-const NavigationFooterText = ({
+const NavigationText = ({
   buttonText
 }: NavigationTextProps) => {
   return (
@@ -24,7 +24,7 @@ const NavigationFooterText = ({
   );
 };
 
-const NavigationFooter = ({
+const Navigation = ({
   historyButtonText,
   homeButtonText,
   upcomingButtonText
@@ -34,19 +34,19 @@ const NavigationFooter = ({
       <div className="navigation-footer">
         <div className="navigation-footer-button" role="button">
           <MdHome/>
-          <NavigationFooterText
+          <NavigationText
             buttonText={homeButtonText}
           />
         </div>
         <div className="navigation-footer-button" role="button">
           <MdHistory/>
-          <NavigationFooterText
+          <NavigationText
             buttonText={historyButtonText}
           />
         </div>
         <div className="navigation-footer-button" role="button">
           <MdUpcoming/>
-          <NavigationFooterText
+          <NavigationText
             buttonText={upcomingButtonText}
           />
         </div>
@@ -55,4 +55,4 @@ const NavigationFooter = ({
   );
 };
 
-export default NavigationFooter;
+export default Navigation;
