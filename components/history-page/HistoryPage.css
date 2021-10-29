@@ -1,0 +1,14 @@
+.history-page {
+  background-color: #010409;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.history-page-feed-card:last-child {
+  margin-bottom: 0;
+}
+
+.history-page-feed-card,
+.history-page-header {
+  margin-bottom: 20px;
+}
