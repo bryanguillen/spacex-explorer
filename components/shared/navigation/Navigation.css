@@ -1,4 +1,5 @@
 .navigation-footer {
+  background-color: #161B22;
   display: flex;
   height: 65px; /* HACK: Same as app-template */
   justify-content: center;
@@ -19,25 +20,23 @@
   margin-top: 5px;
 }
 
-.navigation-side {
-  padding: 10px;
-}
+@media only screen and (min-width: 768px) {
+  .navigation-footer {
+    display: block;
+    height: auto;
+    padding: 10px;
+  }
 
-.navigation-side-button {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
+  .navigation-footer-button {
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 100%;
+  }
 
-.navigation-side-text {
-  flex: 1;
-  font-size: 16px;
-  margin-left: 10px;
-}
-
-.navigation-footer,
-.navigation-side {
-  background-color: #161B22;
+  .navigation-footer-text {
+    flex: 1;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 0;
+  }
 }

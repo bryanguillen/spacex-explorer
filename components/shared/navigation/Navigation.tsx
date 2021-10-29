@@ -55,46 +55,6 @@ const NavigationFooter = ({
   );
 };
 
-const NavigationSideText = ({
-  buttonText
-}: NavigationTextProps) => {
-  return (
-    <span className="navigation-side-text dark-mode-font-color">{buttonText}</span>
-  );
-};
-
-const NavigationSide = ({
-  historyButtonText,
-  homeButtonText,
-  upcomingButtonText
-}: NavigationProps) => {
-  return (
-    <IconContext.Provider value={iconsStyles}>
-      <div className="navigation-side">
-        <div className="navigation-side-button" role="button">
-          <MdHome/>
-          <NavigationSideText
-            buttonText={homeButtonText}
-          />
-        </div>
-        <div className="navigation-side-button" role="button">
-          <MdHistory/>
-          <NavigationSideText
-            buttonText={historyButtonText}
-          />
-        </div>
-        <div className="navigation-side-button" role="button">
-          <MdUpcoming/>
-          <NavigationSideText
-            buttonText={upcomingButtonText}
-          />
-        </div>
-      </div>
-    </IconContext.Provider>
-  );
-};
-
 export {
-  NavigationFooter,
-  NavigationSide
+  NavigationFooter
 };
