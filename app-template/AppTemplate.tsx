@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { NavigationFooter, NavigationProps } from '../components/shared/navigation/Navigation';
+import NavigationFooter, { NavigationProps } from '../components/shared/navigation/Navigation';
 
 import './AppTemplate.css';
 
