@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavigationFooter } from './Navigation';
+import NavigationFooter from './Navigation';
 
 export default {
   title: 'Components/NavigationFooter',
