@@ -6,7 +6,7 @@ import './Navigation.css';
 
 const iconsStyles = { className: 'dark-mode-font-color', size: '2rem' };
 
-interface NavigationProps {
+export interface NavigationProps {
   historyButtonText: string
   homeButtonText: string
   upcomingButtonText: string
