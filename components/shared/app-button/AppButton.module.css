@@ -1,21 +1,16 @@
-button {
-  border: 0;
-  cursor: pointer;
-}
-
-.app-button {
+.base {
   font-size: 16px;
   min-height: 40px;
   min-width: 120px;
 }
 
-.app-button-primary {
+.primary {
   background-color: #21262D;
   border: 2px solid #30363D;
   color: #C9D1D9;
 }
 
-.app-button-welcome {
+.welcome {
   background-color: #1D9BF0;
   border-radius: 10px;
   color: #ffffff;
