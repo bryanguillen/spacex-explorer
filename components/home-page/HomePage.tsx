@@ -2,7 +2,7 @@ import React from 'react';
 import AppButton from '../shared/app-button/AppButton';
 import PageHeader from '../shared/page-header/PageHeader';
 
-import './HomePage.css';
+import styles from './HomePage.module.css';
 
 export interface HomePageProps {
   welcomeButtonText: string
@@ -14,10 +14,10 @@ const HomePage = ({
   welcomeHeaderText
 }: HomePageProps) => {
   return (
-    <div className="home-page">
-      <div className="home-page-content-container">
+    <div className={styles.base}>
+      <div className={styles.content}>
         <PageHeader
-          className="home-page-welcome-header"
+          className={styles.header}
           value={welcomeHeaderText}
         />
         <AppButton text={welcomeButtonText} variant="welcome"/>
