@@ -1,4 +1,4 @@
-.app-template-navigation-container {
+.navigation-container {
   background-color: #161B22;
   bottom: 0;
   position: fixed;
@@ -7,12 +7,16 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .app-template-content-container {
+  .content-container {
     display: flex;
     min-height: 100vh;
   }
 
-  .app-template-navigation-container {
+  .home-page .route-content-container {
+    max-width: 100%;
+  }
+
+  .navigation-container {
     position: static;
     display: flex;
     flex-direction: column;
@@ -21,22 +25,18 @@
     width: 250px;
   }
 
-  .app-template-navigation-container .navigation-side {
+  .navigation-container .navigation-side {
     flex-shrink: 0;
     position: sticky;
     top: 0;
   }
 
-  .app-template-navigation-empty {
+  .navigation-empty {
     flex: 1;
   }
 
-  .app-template-route-content-container {
+  .route-content-container {
     flex: 1;
     max-width: 600px;
-  }
-
-  .app-template-home-page .app-template-route-content-container {
-    max-width: 100%;
   }
 }
