@@ -4,7 +4,7 @@ import PageHeader from '../shared/page-header/PageHeader';
 
 import './HomePage.css';
 
-interface HomePageProps {
+export interface HomePageProps {
   welcomeButtonText: string
   welcomeHeaderText: string
 }
