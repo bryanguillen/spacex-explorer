@@ -2,7 +2,7 @@ import React from 'react';
 import { IconContext } from 'react-icons';
 import { MdHome, MdHistory, MdUpcoming } from 'react-icons/md';
 
-import './Navigation.css';
+import styles from './Navigation.module.css';
 
 const iconsStyles = { className: 'dark-mode-font-color', size: '2rem' };
 
@@ -20,7 +20,7 @@ const NavigationText = ({
   buttonText
 }: NavigationTextProps) => {
   return (
-    <span className="navigation-text dark-mode-font-color">{buttonText}</span>
+    <span className={`${styles.text} dark-mode-font-color`}>{buttonText}</span>
   );
 };
 
@@ -31,20 +31,20 @@ const Navigation = ({
 }: NavigationProps) => {
   return (
     <IconContext.Provider value={iconsStyles}>
-      <div className="navigation">
-        <div className="navigation-button" role="button">
+      <div className={styles.navigation}>
+        <div className={styles.button} role="button">
           <MdHome/>
           <NavigationText
             buttonText={homeButtonText}
           />
         </div>
-        <div className="navigation-button" role="button">
+        <div className={styles.button} role="button">
           <MdHistory/>
           <NavigationText
             buttonText={historyButtonText}
           />
         </div>
-        <div className="navigation-button" role="button">
+        <div className={styles.button} role="button">
           <MdUpcoming/>
           <NavigationText
             buttonText={upcomingButtonText}
