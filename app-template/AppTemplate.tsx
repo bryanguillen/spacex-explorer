@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Navigation, { NavigationProps } from '../components/shared/navigation/Navigation';
 
-import './AppTemplate.css';
+import styles from './AppTemplate.module.css';
 
 interface AppTemplateProps extends NavigationProps {
   isHomePage: boolean
@@ -15,21 +15,21 @@ const AppTemplate: FC<AppTemplateProps> = ({
   upcomingButtonText
 }) => {
   return (
-    <div className={`app-template ${isHomePage ? 'app-template-home-page' : ''}`}>
-      <div className="app-template-content-container">
+    <div className={`${isHomePage ? styles['home-page'] : ''}`}>
+      <div className={styles['content-container']}>
         {
           !isHomePage ? 
-            <div className="app-template-navigation-container">
+            <div className={styles['navigation-container']}>
               <Navigation
                 historyButtonText={historyButtonText}
                 homeButtonText={homeButtonText}
                 upcomingButtonText={upcomingButtonText}
               />
-              <div className="app-template-navigation-empty"></div>
+              <div className={styles['navigation-empty']}></div>
             </div> :
             null
         }
-        <div className="app-template-route-content-container">
+        <div className={styles['route-content-container']}>
           {children}
         </div>
       </div>
