@@ -1,4 +1,4 @@
-.home-page {
+.base {
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   box-sizing: border-box;
   height: 100vh;
@@ -6,7 +6,7 @@
   padding: 10px;
 }
 
-.home-page-content-container {
+.content {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -16,13 +16,13 @@
   width: 100%;
 }
 
-.home-page-welcome-header {
+.header {
   margin-bottom: 10px;
   text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
-  .home-page {
+  .base {
     padding: 0;
   }
 }
