@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './AppButton.css';
+import styles from './AppButton.module.css';
 
 interface AppButtonProps {
   text: string
@@ -12,7 +12,7 @@ const AppButton = ({
   variant
 }: AppButtonProps) => {
   return (
-    <button className={`app-button app-button-${variant}`}>{text}</button>
+    <button className={`${styles.base} ${styles[variant]}`}>{text}</button>
   );
 };
 
