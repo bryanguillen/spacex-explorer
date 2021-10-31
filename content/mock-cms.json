@@ -3,5 +3,9 @@
     "homeButtonText": "Home",
     "historyButtonText": "Past Missions",
     "upcomingButtonText": "Upcoming Mission"
+  },
+  "home": {
+    "welcomeButtonText": "Start Exploring",
+    "welcomeHeaderText": "Explore Past and Upcoming SpaceX Missions"
   }
 }
