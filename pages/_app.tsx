@@ -1,9 +1,11 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/dist/client/router';
 import AppTemplate from '../app-template/AppTemplate';
 import content from '../content/mock-cms.json';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   const {
     homeButtonText,
     historyButtonText,
@@ -14,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <AppTemplate
       homeButtonText={homeButtonText}
       historyButtonText={historyButtonText}
-      isHomePage={true}
+      isHomePage={router.pathname === '/'}
       upcomingButtonText={upcomingButtonText}
     >
       <Component {...pageProps} />
