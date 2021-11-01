@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './MissionTextField.css';
+import styles from './MissionTextField.module.css';
 
 export interface MissionTextFieldProps {
   className?: string
@@ -14,8 +14,8 @@ const MissionTextField = ({
   className
 }: MissionTextFieldProps) => {
   return (
-    <div className={`mission-text-field dark-mode-font-color ${className ? className : ''}`}>
-      <span className="mission-text-field-name">{name}</span>: {value}
+    <div className={`${styles.base} dark-mode-font-color ${className ? className : ''}`}>
+      <span className={styles.name}>{name}</span>: {value}
     </div>
   );
 };
