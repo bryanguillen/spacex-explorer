@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { GetStaticProps } from 'next'
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import HomePage, { HomePageProps } from '../components/home-page/HomePage';
 import content from '../content/mock-cms.json';
