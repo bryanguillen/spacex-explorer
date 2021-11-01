@@ -7,5 +7,11 @@
   "home": {
     "welcomeButtonText": "Start Exploring",
     "welcomeHeaderText": "Explore Past and Upcoming SpaceX Missions"
+  },
+  "history": {
+    "header": "Past Missions",
+    "detailsFieldText": "Details",
+    "dateFieldText": "Date",
+    "readMoreText": "Read More"
   }
 }
