@@ -2,7 +2,7 @@ import React from "react";
 import MissionFeedCard, { MissionFeedCardProps } from "./mission-feed-card/MissionFeedCard";
 import PageHeader from "../shared/page-header/PageHeader";
 
-import './HistoryPage.css';
+import styles from './HistoryPage.module.css';
 
 interface HistoryPageProps {
   missions: MissionFeedCardProps[]
@@ -14,16 +14,16 @@ const HistoryPage = ({
   pageHeader
 }: HistoryPageProps) => {
   return (
-    <div className="history-page">
+    <div className={styles.base}>
       <PageHeader
-        className="history-page-header"
+        className={styles.header}
         value={pageHeader}
       />
       {missions.map((mission: MissionFeedCardProps) => {
         const { missionDate, missionDetails, missionName, missionId } = mission;
         return (
           <MissionFeedCard
-            className="history-page-feed-card"
+            className={styles.card}
             key={missionId}
             missionDate={missionDate}
             missionDetails={missionDetails}
