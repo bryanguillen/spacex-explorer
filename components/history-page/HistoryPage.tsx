@@ -4,7 +4,7 @@ import PageHeader from "../shared/page-header/PageHeader";
 
 import styles from './HistoryPage.module.css';
 
-interface HistoryPageProps {
+export interface HistoryPageProps {
   missions: MissionFeedCardProps[]
   pageHeader: string
 }
@@ -20,7 +20,7 @@ const HistoryPage = ({
         value={pageHeader}
       />
       {missions.map((mission: MissionFeedCardProps) => {
-        const { missionDate, missionDetails, missionName, missionId } = mission;
+        const { readMoreText, missionDate, missionDetails, missionName, missionId } = mission;
         return (
           <MissionFeedCard
             className={styles.card}
@@ -29,7 +29,7 @@ const HistoryPage = ({
             missionDetails={missionDetails}
             missionName={missionName}
             missionId={missionId}
-            readMoreText="Read More"
+            readMoreText={readMoreText}
           />
         );
       })}
