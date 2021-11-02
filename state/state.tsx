@@ -15,13 +15,11 @@ interface AppStateI {
   }
 }
 
-interface ActionI {
-  type: AppAction
-  action: object
-}
+type AppActionType = 'INCREASE_VISIBLE_MISSIONS';
 
-enum AppAction {
-  INCREASE_VISIBLE_MISSIONS = 'INCREASE_VISIBLE_MISSIONS'
+interface ActionI {
+  type: AppActionType
+  payload: number
 }
 
 /**
@@ -46,8 +44,11 @@ const AppDispatchContext = createContext<React.Dispatch<ActionI>>(() => {});
  */
 const reducer: React.Reducer<AppStateI, ActionI> = (state, action) => {
   switch (action.type) {
+    case 'INCREASE_VISIBLE_MISSIONS':
+      const { payload } = action;
+      return { ...state, history: { numberOfVisibleMissions: payload } };
     default:
-      throw new Error(`Unknown action: ${action.type}`);
+      return state;
   };
 }
 
