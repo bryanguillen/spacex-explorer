@@ -1,4 +1,18 @@
-import { parseMission } from "../history-page-utils";
+import {
+  getNumberOfVisibleMissions,
+  parseMission
+} from "../history-page-utils";
+
+describe('getNumberOfVisibleMissions', () => {
+  it('should return current + 20 whenever the result is less than total number of missions', () => {
+    expect(getNumberOfVisibleMissions(20, 100)).toBe(40);
+    expect(getNumberOfVisibleMissions(80, 100)).toBe(100); // test when the result of adding 20 gives you upper bound
+  });
+  
+  it('should return current + ${num_left} whenever adding 20 would result in more than total number of missions', () => {
+    expect(getNumberOfVisibleMissions(90, 100)).toBe(100);
+  });
+});
 
 describe('parseMission', () => {
   it('should return an object with the MissionFeedCardInterface', () => {
