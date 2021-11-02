@@ -3,16 +3,22 @@ import { GetStaticProps } from 'next';
 import type { NextPage } from 'next';
 import apolloClient from '../config/apollo-client';
 import Head from 'next/head';
-import HistoryPage, { HistoryPageProps } from '../components/history-page/HistoryPage';
+import { MissionFeedCardProps } from '../components/history-page/mission-feed-card/MissionFeedCard';
+import HistoryPage from '../components/history-page/HistoryPage';
 import content from '../content/mock-cms.json';
-import { parsePreviousMissions } from '../components/history-page/history-page-utils';
-import { useApp } from '../state/state';
+import { getNumberOfVisibleMissions, parsePreviousMissions } from '../components/history-page/history-page-utils';
+import { useApp, useAppDispatch } from '../state/state';
 
-const History: NextPage<HistoryPageProps> = ({
+const History: NextPage<{
+  missions: MissionFeedCardProps[],
+  pageHeader: string
+}> = ({
   missions,
   pageHeader
 }) => {
-  const { history } = useApp();
+  const state = useApp();
+  const { history: { numberOfVisibleMissions } } = state;
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -21,7 +27,15 @@ const History: NextPage<HistoryPageProps> = ({
         <meta name="description" content="Past SpaceX missions" />
       </Head>
       <HistoryPage
-        missions={missions.slice(0, history.numberOfVisibleMissions)}
+        allMissionsVisible={numberOfVisibleMissions === missions.length}
+        getMoreMissions={() => {
+          const newNumberOfMissionsVisible = getNumberOfVisibleMissions(numberOfVisibleMissions, missions.length);
+          dispatch({
+            type: 'INCREASE_VISIBLE_MISSIONS',
+            payload: newNumberOfMissionsVisible
+          });
+        }}
+        missions={missions.slice(0, numberOfVisibleMissions - 1)}
         pageHeader={pageHeader}
       />
     </>
