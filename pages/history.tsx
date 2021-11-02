@@ -13,7 +13,7 @@ const History: NextPage<HistoryPageProps> = ({
   pageHeader
 }) => {
   const { history } = useApp();
-  
+
   return (
     <>
       <Head>
