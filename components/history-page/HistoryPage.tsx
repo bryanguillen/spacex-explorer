@@ -35,7 +35,7 @@ const HistoryPage = ({
     return () => {
       if (observedDiv.current) observer.unobserve(observedDiv.current);
     };
-  }, [observedDiv]);
+  }, [observedDiv, getMoreMissions]);
 
   return (
     <div className={styles.base}>
