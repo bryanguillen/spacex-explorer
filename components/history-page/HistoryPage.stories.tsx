@@ -1,6 +1,10 @@
 import React from 'react'
 import HistoryPage from './HistoryPage';
 
+/**
+ * @TODO Add story for fetching more data
+ */
+
 export default {
   title: 'Pages/HistoryPage',
   component: HistoryPage
@@ -32,6 +36,8 @@ const historyPageMockData = [
 
 export const HistoryPageStory = () => (
   <HistoryPage
+    allMissionsVisible={true}
+    getMoreMissions={() => console.log('getting more missions...')}
     missions={historyPageMockData}
     pageHeader="Past Missions"
   />
