@@ -11,6 +11,7 @@
 }
 
 .navigation-enabled {
+  background-color: #000000;
   padding-bottom: 75px; /* nav container height plus 10 */
 }
 
