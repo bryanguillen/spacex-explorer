@@ -5,11 +5,15 @@ import PageHeader from "../shared/page-header/PageHeader";
 import styles from './HistoryPage.module.css';
 
 export interface HistoryPageProps {
+  allMissionsVisible: boolean
+  getMoreMissions(): void
   missions: MissionFeedCardProps[]
   pageHeader: string
 }
 
 const HistoryPage = ({
+  allMissionsVisible,
+  getMoreMissions,
   missions,
   pageHeader
 }: HistoryPageProps) => {
@@ -22,7 +26,7 @@ const HistoryPage = ({
     const observerCallBack = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
-        console.log('element visible');
+        getMoreMissions();
       }
     };
     const observer = new IntersectionObserver(observerCallBack);
@@ -53,7 +57,7 @@ const HistoryPage = ({
           />
         );
       })}
-      <div ref={observedDiv}></div>
+      {!allMissionsVisible ? <div ref={observedDiv}></div> : null}
     </div>
   );
 };
