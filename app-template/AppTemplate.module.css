@@ -1,3 +1,7 @@
+.content-container {
+  min-height: 100vh;
+}
+
 .navigation-container {
   background-color: #161B22;
   bottom: 0;
@@ -6,10 +10,13 @@
   width: 100%;
 }
 
+.navigation-enabled {
+  padding-bottom: 75px; /* nav container height plus 10 */
+}
+
 @media only screen and (min-width: 768px) {
   .content-container {
     display: flex;
-    min-height: 100vh;
   }
 
   .home-page .route-content-container {
@@ -33,6 +40,10 @@
 
   .navigation-empty {
     flex: 1;
+  }
+
+  .navigation-enabled {
+    padding-bottom: 0;
   }
 
   .route-content-container {
