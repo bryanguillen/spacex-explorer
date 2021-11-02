@@ -15,23 +15,21 @@ const AppTemplate: FC<AppTemplateProps> = ({
   upcomingButtonText
 }) => {
   return (
-    <div className={`${isHomePage ? styles['home-page'] : ''}`}>
-      <div className={`${styles['content-container']} ${!isHomePage ? styles['navigation-enabled'] : ''}`}>
-        {
-          !isHomePage ? 
-            <div className={styles['navigation-container']}>
-              <Navigation
-                historyButtonText={historyButtonText}
-                homeButtonText={homeButtonText}
-                upcomingButtonText={upcomingButtonText}
-              />
-              <div className={styles['navigation-empty']}></div>
-            </div> :
-            null
-        }
-        <div className={styles['route-content-container']}>
-          {children}
-        </div>
+    <div className={`${styles['base']} ${!isHomePage ? styles['navigation-enabled'] : styles['home-page']}`}>
+      {
+        !isHomePage ? 
+          <div className={styles['navigation-container']}>
+            <Navigation
+              historyButtonText={historyButtonText}
+              homeButtonText={homeButtonText}
+              upcomingButtonText={upcomingButtonText}
+            />
+            <div className={styles['navigation-empty']}></div>
+          </div> :
+          null
+      }
+      <div className={styles['route-content-container']}>
+        {children}
       </div>
     </div>
   );
