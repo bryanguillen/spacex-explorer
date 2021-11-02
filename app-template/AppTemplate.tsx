@@ -16,7 +16,7 @@ const AppTemplate: FC<AppTemplateProps> = ({
 }) => {
   return (
     <div className={`${isHomePage ? styles['home-page'] : ''}`}>
-      <div className={styles['content-container']}>
+      <div className={`${styles['content-container']} ${!isHomePage ? styles['navigation-enabled'] : ''}`}>
         {
           !isHomePage ? 
             <div className={styles['navigation-container']}>
