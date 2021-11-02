@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/dist/client/router';
-import { AppProvider } from '../state/state';
+import { AppProvider } from '../state';
 import AppTemplate from '../components/app-template/AppTemplate';
 import content from '../content/mock-cms.json';
 

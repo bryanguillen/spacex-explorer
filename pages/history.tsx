@@ -7,7 +7,7 @@ import { MissionFeedCardProps } from '../components/history-page/mission-feed-ca
 import HistoryPage from '../components/history-page/HistoryPage';
 import content from '../content/mock-cms.json';
 import { getNumberOfVisibleMissions, parsePreviousMissions } from '../components/history-page/history-page-utils';
-import { useApp, useAppDispatch } from '../state/state';
+import { useApp, useAppDispatch } from '../state';
 
 const History: NextPage<{
   missions: MissionFeedCardProps[],
