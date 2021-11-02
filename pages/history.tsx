@@ -6,11 +6,14 @@ import Head from 'next/head';
 import HistoryPage, { HistoryPageProps } from '../components/history-page/HistoryPage';
 import content from '../content/mock-cms.json';
 import { parsePreviousMissions } from '../components/history-page/history-page-utils';
+import { useApp } from '../state/state';
 
 const History: NextPage<HistoryPageProps> = ({
   missions,
   pageHeader
 }) => {
+  const { history } = useApp();
+  
   return (
     <>
       <Head>
@@ -18,7 +21,7 @@ const History: NextPage<HistoryPageProps> = ({
         <meta name="description" content="Past SpaceX missions" />
       </Head>
       <HistoryPage
-        missions={missions}
+        missions={missions.slice(0, history.numberOfVisibleMissions)}
         pageHeader={pageHeader}
       />
     </>
@@ -37,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data } = await apolloClient.query({
     query: gql`
       query {
-        launchesPast(limit: 30) {
+        launchesPast {
           id
           launch_date_unix
           details
