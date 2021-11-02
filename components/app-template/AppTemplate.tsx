@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Navigation, { NavigationProps } from '../components/shared/navigation/Navigation';
+import Navigation, { NavigationProps } from '../shared/navigation/Navigation';
 
 import styles from './AppTemplate.module.css';
 
