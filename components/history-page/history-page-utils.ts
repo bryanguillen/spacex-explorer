@@ -8,6 +8,19 @@ type PreviousMissionFromApi = {
 };
 
 /**
+ * @description Helper function used at the app level for getting the
+ * number of missions the history pg should show; it's a simple wrapper
+ * for simple logic that can now be tested
+ */
+export function getNumberOfVisibleMissions(
+  currentVisible: number,
+  totalMissions: number
+) {
+  const currentWithTwentyMore = currentVisible + 20;
+  return currentWithTwentyMore < totalMissions ? currentWithTwentyMore : totalMissions;
+}
+
+/**
  * @description Complement for function below;
  * it takes in an object from back-end api, and
  * spits out an object formatted according to the
