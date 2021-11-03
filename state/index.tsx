@@ -19,9 +19,9 @@ export enum Actions {
   INCREASE_VISIBLE_MISSIONS = 'INCREASE_VISIBLE_MISSIONS'
 }
 
-type ActionI = {
-  type: Actions,
-  payload: number
+interface ActionI {
+  type: Actions
+  payload: any
 }
 
 /**
