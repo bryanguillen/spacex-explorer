@@ -8,6 +8,7 @@ import HistoryPage from '../components/history-page/HistoryPage';
 import content from '../content/mock-cms.json';
 import { getNumberOfVisibleMissions, parsePreviousMissions } from '../components/history-page/history-page-utils';
 import { useApp, useAppDispatch } from '../state';
+import revalidateTime from '../constants/revalidate-time';
 
 const History: NextPage<{
   missions: MissionFeedCardProps[],
@@ -68,7 +69,8 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       pageHeader: header,
       missions: parsePreviousMissions(data.launchesPast, detailsFieldText, dateFieldText, readMoreText)
-    }
+    },
+    revalidate: revalidateTime
   };
 };
 
