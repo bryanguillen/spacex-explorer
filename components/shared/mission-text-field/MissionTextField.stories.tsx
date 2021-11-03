@@ -12,3 +12,9 @@ export const MissionTextFieldStory = () => (
     <MissionTextField name="Date" value="10/26/21"/>
   </div>
 );
+
+export const MissionTextFieldEmptyStory = () => (
+  <div style={{ padding: '10px', backgroundColor: '#000000' }}>
+    <MissionTextField name="Date" value=""/>
+  </div>
+);
