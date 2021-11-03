@@ -16,16 +16,17 @@ describe('getNumberOfVisibleMissions', () => {
 
 describe('parseMission', () => {
   it('should return an object with the MissionFeedCardInterface', () => {
+    const mockUnixTimestamp = 1599137160; // maps to 9/3/20
     const {
       missionName,
       missionDate,
       missionDetails,
       missionId,
       readMoreText
-    } = parseMission({ mission_name: 'test', details: 'this is a test', id: '1', launch_date_unix: 1 }, 'Details', 'Date', 'Read More');
+    } = parseMission({ mission_name: 'test', details: 'this is a test', id: '1', launch_date_unix: mockUnixTimestamp }, 'Details', 'Date', 'Read More');
     
     expect(missionName).toBe('test');
-    expect(missionDate).toStrictEqual({name: 'Date', value: '1'});
+    expect(missionDate).toStrictEqual({name: 'Date', value: '9/3/2020'});
     expect(missionDetails).toStrictEqual({name: 'Details', value: 'this is a test'});
     expect(missionId).toBe(1);
     expect(readMoreText).toBe('Read More');
