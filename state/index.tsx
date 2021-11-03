@@ -25,10 +25,11 @@ interface ActionI {
 }
 
 /**
- * @description Default value for the application state
+ * @description Default value for the application state;
+ * exported for testing
  */
 
-const defaultAppState: AppStateI = {
+export const defaultAppState: AppStateI = {
   history: {
     numberOfVisibleMissions: 20
   }
@@ -44,7 +45,7 @@ const AppDispatchContext = createContext<React.Dispatch<ActionI>>(() => {});
  * @description Global application reducer; this of course can be refactored to
  * handle actions for a given page/route
  */
-const reducer: React.Reducer<AppStateI, ActionI> = (state, action) => {
+export const reducer: React.Reducer<AppStateI, ActionI> = (state, action) => {
   switch (action.type) {
     case Actions.INCREASE_VISIBLE_MISSIONS:
       const { payload } = action;
