@@ -39,7 +39,7 @@ readMoreText: string
 ): MissionFeedCardProps {
   return {
     missionName: mission_name,
-    missionDate: { name: dateFieldText, value: launch_date_unix + ''},
+    missionDate: { name: dateFieldText, value: parseUnixDate(launch_date_unix)},
     missionDetails: { name: detailsFieldText, value: details ? details : '' },
     missionId: parseInt(id),
     readMoreText
@@ -58,4 +58,15 @@ export function parsePreviousMissions(
   readMoreText: string
 ): MissionFeedCardProps[] {
   return previousMissions.map((mission: PreviousMissionFromApi): MissionFeedCardProps => parseMission(mission, detailsFieldText, dateFieldText, readMoreText));
+}
+
+/**
+ * @description Wrapper for converting unix timestamp -> MM/DD/YYYY;
+ * if there were more use cases, a library could be leveraged here
+ */
+function parseUnixDate(unixTimestamp: number) {
+  const date = new Date(unixTimestamp * 1000); // convert from s to ms
+  const month = date.getMonth() + 1;
+
+  return `${month}/${date.getDate()}/${date.getFullYear()}`;
 }
