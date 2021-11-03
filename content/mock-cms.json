@@ -13,5 +13,12 @@
     "detailsFieldText": "Details",
     "dateFieldText": "Date",
     "readMoreText": "Read More"
+  },
+  "mission": {
+    "fieldsSectionHeader": "About",
+    "date": "Date",
+    "launchLocation": "Launch",
+    "rocket": "Rocket",
+    "details": "Details"
   }
 }
