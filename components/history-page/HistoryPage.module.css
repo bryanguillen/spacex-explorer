@@ -8,6 +8,11 @@
   margin-bottom: 0;
 }
 
+.observed {
+  background-color: #000000;
+  height: 20px; /* Random */
+}
+
 .card,
 .header {
   margin-bottom: 20px;

@@ -57,7 +57,7 @@ const HistoryPage = ({
           />
         );
       })}
-      {!allMissionsVisible ? <div ref={observedDiv}></div> : null}
+      {!allMissionsVisible ? <div className={styles.observed} ref={observedDiv}></div> : null}
     </div>
   );
 };
