@@ -1,0 +1,19 @@
+.base {
+  background-color: #010409;
+  min-height: 100vh;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.fields-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
