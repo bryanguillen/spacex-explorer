@@ -7,7 +7,7 @@ import { MissionFeedCardProps } from '../components/history-page/mission-feed-ca
 import HistoryPage from '../components/history-page/HistoryPage';
 import content from '../content/mock-cms.json';
 import { getNumberOfVisibleMissions, parsePreviousMissions } from '../components/history-page/history-page-utils';
-import { useApp, useAppDispatch } from '../state';
+import { useApp, useAppDispatch, Actions } from '../state';
 import revalidateTime from '../constants/revalidate-time';
 
 const History: NextPage<{
@@ -32,7 +32,7 @@ const History: NextPage<{
         getMoreMissions={() => {
           const newNumberOfMissionsVisible = getNumberOfVisibleMissions(numberOfVisibleMissions, missions.length);
           dispatch({
-            type: 'INCREASE_VISIBLE_MISSIONS',
+            type: Actions.INCREASE_VISIBLE_MISSIONS,
             payload: newNumberOfMissionsVisible
           });
         }}
