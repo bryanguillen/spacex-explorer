@@ -3,9 +3,9 @@ import MissionImage from "./mission-image/MissionImage";
 import MissionTextField, { MissionTextFieldProps } from "../shared/mission-text-field/MissionTextField";
 import PageHeader from "../shared/page-header/PageHeader";
 
-import './MissionPage.css';
+import styles from './MissionPage.module.css';
 
-interface MissionPageProps {
+export interface MissionPageProps {
   name: string
   fieldsSectionHeader: string
   date: MissionTextFieldProps
@@ -25,31 +25,31 @@ const MissionPage = ({
   imageUrl
 }: MissionPageProps) => {
   return (
-    <div className="mission-page">
+    <div className={styles.base}>
       <PageHeader
         value={name}
       />
       <MissionImage
         imageUrl={imageUrl}
       />
-      <h2 className="dark-mode-font-color mission-page-fields-section-header">{fieldsSectionHeader}</h2>
+      <h2 className={`dark-mode-font-color ${styles['fields-header']}`}>{fieldsSectionHeader}</h2>
       <MissionTextField
-        className="mission-page-text-field"
+        className={styles.field}
         name={date.name}
         value={date.value}
       />
       <MissionTextField
-        className="mission-page-text-field"
+        className={styles.field}
         name={launchLocation.name}
         value={launchLocation.value}
       />
       <MissionTextField
-        className="mission-page-text-field"
+        className={styles.field}
         name={rocket.name}
         value={rocket.value}
       />
       <MissionTextField
-        className="mission-page-text-field"
+        className={styles.field}
         name={details.name}
         value={details.value}
       />
