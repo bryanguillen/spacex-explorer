@@ -1,14 +1,14 @@
 import { gql } from '@apollo/client';
 import { GetStaticProps } from 'next';
 import type { NextPage } from 'next';
-import apolloClient from '../config/apollo-client';
+import apolloClient from '../../config/apollo-client';
 import Head from 'next/head';
-import { MissionFeedCardProps } from '../components/history-page/mission-feed-card/MissionFeedCard';
-import HistoryPage from '../components/history-page/HistoryPage';
-import content from '../content/mock-cms.json';
-import { getNumberOfVisibleMissions, parsePreviousMissions } from '../components/history-page/history-page-utils';
-import { useApp, useAppDispatch, Actions } from '../state';
-import revalidateTime from '../constants/revalidate-time';
+import { MissionFeedCardProps } from '../../components/history-page/mission-feed-card/MissionFeedCard';
+import HistoryPage from '../../components/history-page/HistoryPage';
+import content from '../../content/mock-cms.json';
+import { getNumberOfVisibleMissions, parsePreviousMissions } from '../../components/history-page/history-page-utils';
+import { useApp, useAppDispatch, Actions } from '../../state';
+import revalidateTime from '../../constants/revalidate-time';
 
 const History: NextPage<{
   missions: MissionFeedCardProps[],
