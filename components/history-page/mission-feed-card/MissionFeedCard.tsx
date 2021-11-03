@@ -25,7 +25,7 @@ const MissionFeedCard = ({
     <div className={`${styles.base} ${className ? className : ''}`}>
       <div className={`${styles.field} ${styles.name} dark-mode-font-color`}>{missionName}</div>
       <MissionTextField className={styles.field} name={missionDate.name} value={missionDate.value}/>
-      {missionDetails.value ? <MissionTextField className={styles.field} name={missionDetails.name} value={truncateDetails(missionDetails.value)}/> : null}
+      <MissionTextField className={styles.field} name={missionDetails.name} value={truncateDetails(missionDetails.value)}/>
       <div className={styles['button-container']}>
         <AppButton
           text={readMoreText}
