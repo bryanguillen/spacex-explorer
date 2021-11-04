@@ -5,7 +5,7 @@ import apolloClient from '../config/apollo-client';
 
 /**
  * @description Module used for handling the getting (and caching)
- * of all past missions.  Essentially, the reason this has is needed is
+ * of all past missions.  Essentially, the reason this is needed is
  * that for some reason getting a past mission by ID is not working
  * in the SpaceX API, so, the solution would be to fetch all past missions.
  * But, at build time, it would be best if we could just fetch the data once
