@@ -5,11 +5,13 @@ import PageHeader from '../shared/page-header/PageHeader';
 import styles from './HomePage.module.css';
 
 export interface HomePageProps {
+  onClickWelcomeButton: React.MouseEventHandler<HTMLButtonElement>
   welcomeButtonText: string
   welcomeHeaderText: string
 }
 
 const HomePage = ({
+  onClickWelcomeButton,
   welcomeButtonText,
   welcomeHeaderText
 }: HomePageProps) => {
@@ -20,7 +22,7 @@ const HomePage = ({
           className={styles.header}
           value={welcomeHeaderText}
         />
-        <AppButton text={welcomeButtonText} variant="welcome"/>
+        <AppButton onClick={onClickWelcomeButton} text={welcomeButtonText} variant="welcome"/>
       </div>
     </div>
   );
