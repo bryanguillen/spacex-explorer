@@ -9,8 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const {
     homeButtonText,
-    historyButtonText,
-    upcomingButtonText
+    historyButtonText
   } = content.global;
 
   return (
@@ -19,7 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         homeButtonText={homeButtonText}
         historyButtonText={historyButtonText}
         isHomePage={router.pathname === '/'}
-        upcomingButtonText={upcomingButtonText}
       >
         <Component {...pageProps} />
       </AppTemplate>
