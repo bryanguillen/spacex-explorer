@@ -1,8 +1,7 @@
 {
   "global": {
     "homeButtonText": "Home",
-    "historyButtonText": "Past Missions",
-    "upcomingButtonText": "Upcoming Mission"
+    "historyButtonText": "Past Missions"
   },
   "home": {
     "welcomeButtonText": "Start Exploring",
