@@ -10,13 +10,13 @@ export default {
 };
 
 export const AppTemplateStoryNotHome = () => (
-  <AppTemplate homeButtonText="Home" historyButtonText="Past Missions" upcomingButtonText="Upcoming Mission" isHomePage={false}>
+  <AppTemplate homeButtonText="Home" historyButtonText="Past Missions" isHomePage={false}>
     <div>child</div>
   </AppTemplate>
 );
 
 export const AppTemplateStoryHome = () => (
-  <AppTemplate  homeButtonText="Home" historyButtonText="Past Missions" upcomingButtonText="Upcoming Mission" isHomePage={true}>
+  <AppTemplate  homeButtonText="Home" historyButtonText="Past Missions" isHomePage={true}>
     <div>child</div>
   </AppTemplate>
 );

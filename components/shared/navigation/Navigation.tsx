@@ -9,7 +9,6 @@ const iconsStyles = { className: 'dark-mode-font-color', size: '2rem' };
 export interface NavigationProps {
   historyButtonText: string
   homeButtonText: string
-  upcomingButtonText: string
 }
 
 interface NavigationTextProps {
@@ -26,8 +25,7 @@ const NavigationText = ({
 
 const Navigation = ({
   historyButtonText,
-  homeButtonText,
-  upcomingButtonText
+  homeButtonText
 }: NavigationProps) => {
   return (
     <IconContext.Provider value={iconsStyles}>

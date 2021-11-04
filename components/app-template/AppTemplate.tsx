@@ -11,8 +11,7 @@ const AppTemplate: FC<AppTemplateProps> = ({
   children,
   historyButtonText,
   homeButtonText,
-  isHomePage,
-  upcomingButtonText
+  isHomePage
 }) => {
   return (
     <div className={`${styles['base']} ${!isHomePage ? styles['navigation-enabled'] : styles['home-page']}`}>
@@ -22,7 +21,6 @@ const AppTemplate: FC<AppTemplateProps> = ({
             <Navigation
               historyButtonText={historyButtonText}
               homeButtonText={homeButtonText}
-              upcomingButtonText={upcomingButtonText}
             />
             <div className={styles['navigation-empty']}></div>
           </div> :
