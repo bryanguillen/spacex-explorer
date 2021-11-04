@@ -3,16 +3,18 @@ import React from 'react';
 import styles from './AppButton.module.css';
 
 interface AppButtonProps {
+  onClick: React.MouseEventHandler<HTMLButtonElement>
   text: string
   variant: 'welcome' | 'primary'
 }
 
 const AppButton = ({
+  onClick,
   text,
   variant
 }: AppButtonProps) => {
   return (
-    <button className={`${styles.base} ${styles[variant]}`}>{text}</button>
+    <button onClick={onClick} className={`${styles.base} ${styles[variant]}`}>{text}</button>
   );
 };
 
