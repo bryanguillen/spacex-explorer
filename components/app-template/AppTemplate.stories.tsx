@@ -10,13 +10,25 @@ export default {
 };
 
 export const AppTemplateStoryNotHome = () => (
-  <AppTemplate homeButtonText="Home" historyButtonText="Past Missions" isHomePage={false}>
+  <AppTemplate
+    homeButtonText="Home"
+    historyButtonText="Past Missions"
+    isHomePage={false}
+    onClickHistory={() => undefined}
+    onClickHome={() => undefined}
+  >
     <div>child</div>
   </AppTemplate>
 );
 
 export const AppTemplateStoryHome = () => (
-  <AppTemplate  homeButtonText="Home" historyButtonText="Past Missions" isHomePage={true}>
+  <AppTemplate 
+    homeButtonText="Home"
+    historyButtonText="Past Missions"
+    isHomePage={true}
+    onClickHistory={() => undefined}
+    onClickHome={() => undefined}
+  >
     <div>child</div>
   </AppTemplate>
 );
