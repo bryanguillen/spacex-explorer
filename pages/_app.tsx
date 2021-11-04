@@ -18,6 +18,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         homeButtonText={homeButtonText}
         historyButtonText={historyButtonText}
         isHomePage={router.pathname === '/'}
+        onClickHistory={(event) => router.push('/history')}
+        onClickHome={(event) => router.push('/')}
       >
         <Component {...pageProps} />
       </AppTemplate>
