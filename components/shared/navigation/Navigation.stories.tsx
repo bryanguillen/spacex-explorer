@@ -12,7 +12,8 @@ export const NavigationStory = () => (
     <Navigation
       historyButtonText="Past Missions"
       homeButtonText="Home"
-      upcomingButtonText="Upcoming"
+      onClickHistory={() => undefined}
+      onClickHome={() => undefined}
     />
   </div>
 );
