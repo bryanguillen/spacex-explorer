@@ -6,5 +6,5 @@ export default {
   component: AppButton
 };
 
-export const PrimaryButtonStory = () => <AppButton variant="primary" text="Primary"/>;
-export const WelcomeButtonStory = () => <AppButton variant="welcome" text="Welcome"/>;
+export const PrimaryButtonStory = () => <AppButton onClick={(event) => console.log('clicked')} variant="primary" text="Primary"/>;
+export const WelcomeButtonStory = () => <AppButton onClick={(event) => console.log('clicked welcome')} variant="welcome" text="Welcome"/>;
