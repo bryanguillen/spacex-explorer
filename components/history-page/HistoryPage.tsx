@@ -9,13 +9,15 @@ export interface HistoryPageProps {
   getMoreMissions(): void
   missions: MissionFeedCardProps[]
   pageHeader: string
+  onClick(id: number): void 
 }
 
 const HistoryPage = ({
   allMissionsVisible,
   getMoreMissions,
   missions,
-  pageHeader
+  pageHeader,
+  onClick
 }: HistoryPageProps) => {
   const observedDiv = useRef<HTMLDivElement>(null);
 
@@ -54,6 +56,7 @@ const HistoryPage = ({
             missionName={missionName}
             missionId={missionId}
             readMoreText={readMoreText}
+            onClickReadMore={(event) => onClick(missionId)}
           />
         );
       })}

@@ -1,6 +1,7 @@
 import { gql } from '@apollo/client';
 import { GetStaticProps } from 'next';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/dist/client/router';
 import apolloClient from '../../config/apollo-client';
 import Head from 'next/head';
 import { MissionFeedCardProps } from '../../components/history-page/mission-feed-card/MissionFeedCard';
@@ -19,6 +20,7 @@ const History: NextPage<{
   const state = useApp();
   const { history: { numberOfVisibleMissions } } = state;
   const dispatch = useAppDispatch();
+  const router = useRouter();
 
   return (
     <>
@@ -37,6 +39,7 @@ const History: NextPage<{
         }}
         missions={missions.slice(0, numberOfVisibleMissions - 1)}
         pageHeader={pageHeader}
+        onClick={(id: number) => router.push(`/history/${id}`)}
       />
     </>
   );

@@ -12,6 +12,7 @@ export interface MissionFeedCardProps {
   missionDetails: MissionTextFieldProps
   readMoreText: string
   missionId: number
+  onClickReadMore: React.MouseEventHandler<HTMLButtonElement>
 }
 
 const MissionFeedCard = ({
@@ -19,7 +20,8 @@ const MissionFeedCard = ({
   missionName,
   missionDate,
   missionDetails,
-  readMoreText
+  readMoreText,
+  onClickReadMore
 }: MissionFeedCardProps) => {
   return (
     <div className={`${styles.base} ${className ? className : ''}`}>
@@ -28,6 +30,7 @@ const MissionFeedCard = ({
       <MissionTextField className={styles.field} name={missionDetails.name} value={truncateDetails(missionDetails.value)}/>
       <div className={styles['button-container']}>
         <AppButton
+          onClick={onClickReadMore}
           text={readMoreText}
           variant="primary"
         />
