@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconContext } from 'react-icons';
-import { MdHome, MdHistory, MdUpcoming } from 'react-icons/md';
+import { MdHome, MdHistory } from 'react-icons/md';
 
 import styles from './Navigation.module.css';
 
