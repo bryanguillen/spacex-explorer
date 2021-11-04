@@ -44,12 +44,6 @@ const Navigation = ({
             buttonText={historyButtonText}
           />
         </div>
-        <div className={styles.button} role="button">
-          <MdUpcoming/>
-          <NavigationText
-            buttonText={upcomingButtonText}
-          />
-        </div>
       </div>
     </IconContext.Provider>
   );
