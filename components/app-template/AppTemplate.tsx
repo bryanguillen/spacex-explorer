@@ -7,6 +7,13 @@ interface AppTemplateProps extends NavigationProps {
   isHomePage: boolean
 }
 
+/**
+ * @description Component used to wrap all other "page" components in the app
+ * (e.g. History Page).  This provides reuse for the overall application skeleton
+ * by allowing other pieces of contents (i.e. other pages) to be plugged in.
+ * Without this, this would have to be imported into all other page components
+ * that need the navigation and its positioning.
+ */
 const AppTemplate: FC<AppTemplateProps> = ({
   children,
   historyButtonText,
