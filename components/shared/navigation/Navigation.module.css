@@ -10,7 +10,7 @@
 .navigation {
   background-color: #161B22;
   display: flex;
-  height: 65px; /* HACK: Same as app-template */
+  height: 65px; /* NOTE: Same as app-template */
   justify-content: center;
   padding: 5px;
 }
@@ -31,6 +31,9 @@
     display: block;
     height: auto;
     padding: 10px;
+    /* For app layout */
+    position: sticky;
+    top: 0;
   }
 
   .text {
