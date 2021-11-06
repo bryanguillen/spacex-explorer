@@ -1,27 +1,19 @@
 # SpaceX Missions Explorer
 
-## Description
-
-This document contains additional context around the project (from a business perspective), as well as high level documentation for the technical implementation.
-
 ## Background
 
-This project is a nice little side project where a user can visit a site (_coming soon_) and see past and upcoming missions, with the purpose of continuous learning, as it relates to the latest front end tech (e.g. `next.js`, see more below).
+This project is a nice little side project where a user can visit a site and see past missions for SpaceX.  The reason for this is that I just wanted to have some fun by writing some code to grow and stay sharp with fundamentals.
 
-It is a work in progress, so that is why there are no link or screenshots just yet.
+## Project Overview
 
-## Technical Implementation
+### Technical Overview
 
-_Note: Given that this project is constantly evolving, the information below is subject to modifications._
+Now, rather than have a typical `README.md`, I actually went ahead and created a blog post that contains a video where I demo the project and also discuss the architecture/implementation at a high level.  Please checkout the video [here](https://bryg217.github.io/bryans-blog/posts/5-next-js-app-architecture/).
 
-### Stack
+### Link
 
-1. Typescript
-2. Next.js
-3. SpaceX GraphQL API (click [here](https://studio.apollographql.com/sandbox/explorer) for more detail)
+The app has been deployed using Netlify; see the app [here](https://zen-lumiere-da734a.netlify.app/).
 
-### Key Files and Directories
+### Caution
 
-1. `./pages`
-2. `./components`
-3. `./state/index.ts`
+**Note: It seems like the API is out of date.  It works, but the data returned is from 2020 and earlier.  For the link, see the next section.**
