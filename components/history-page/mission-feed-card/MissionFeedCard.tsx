@@ -17,7 +17,7 @@ export interface MissionFeedCardPropsBase {
   missionDate: MissionTextFieldProps
   missionDetails: MissionTextFieldProps
   readMoreText: string
-  missionId: number
+  missionId: number // used for testing
 }
 
 /**
