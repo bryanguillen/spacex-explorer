@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import HomePage, { HomePageProps } from '../components/home-page/HomePage';
+import HomePage from '../components/home-page/HomePage';
 import content from '../content/mock-cms.json';
 
-const Home: NextPage<HomePageProps> = ({
+const Home: NextPage<{ welcomeButtonText: string, welcomeHeaderText: string }> = ({
   welcomeButtonText,
   welcomeHeaderText
 }) => {
