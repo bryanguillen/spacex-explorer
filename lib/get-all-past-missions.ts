@@ -9,7 +9,9 @@ import apolloClient from '../config/apollo-client';
  * that for some reason getting a past mission by ID is not working
  * in the SpaceX API, so, the solution would be to fetch all past missions.
  * But, at build time, it would be best if we could just fetch the data once
- * and then use it within getStaticProps.  Hence, the code within this module. 
+ * and then use it within getStaticProps.  Hence, the code within this module.
+ * For more on where this code came from and just general context, please
+ * visit: https://flaviocopes.com/nextjs-cache-data-globally/. 
  */
 
 /**
