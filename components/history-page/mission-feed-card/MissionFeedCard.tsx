@@ -39,7 +39,7 @@ const MissionFeedCard = ({
   onClickReadMore
 }: MissionFeedCardProps) => {
   return (
-    <div id={`mission-${missionId}`} className={`${styles.base} ${className ? className : ''}`}>
+    <div id={`mission-${missionId}`} className={`mission-feed-card ${styles.base} ${className ? className : ''}`}>
       <div className={`${styles.field} ${styles.name} dark-mode-font-color`}>{missionName}</div>
       <MissionTextField className={styles.field} name={missionDate.name} value={missionDate.value}/>
       <MissionTextField className={styles.field} name={missionDetails.name} value={truncateDetails(missionDetails.value)}/>

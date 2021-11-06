@@ -37,7 +37,7 @@ const History: NextPage<{
             payload: newNumberOfMissionsVisible
           });
         }}
-        missions={missions.slice(0, numberOfVisibleMissions - 1)}
+        missions={missions.slice(0, numberOfVisibleMissions)}
         pageHeader={pageHeader}
         onClick={(id: number) => router.push(`/history/${id}`)}
       />
