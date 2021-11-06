@@ -1,4 +1,4 @@
-import { MissionFeedCardProps } from './mission-feed-card/MissionFeedCard';
+import { MissionFeedCardPropsBase } from './mission-feed-card/MissionFeedCard';
 import parseUnixTimestamp from '../shared/utils/parse-unix-timestamp';
 
 type PreviousMissionFromApi = {
@@ -37,7 +37,7 @@ export function parseMission(
 detailsFieldText: string,
 dateFieldText: string,
 readMoreText: string
-): MissionFeedCardProps {
+): MissionFeedCardPropsBase {
   return {
     missionName: mission_name,
     missionDate: { name: dateFieldText, value: parseUnixTimestamp(launch_date_unix)},
@@ -57,6 +57,6 @@ export function parsePreviousMissions(
   detailsFieldText: string,
   dateFieldText: string,
   readMoreText: string
-): MissionFeedCardProps[] {
-  return previousMissions.map((mission: PreviousMissionFromApi): MissionFeedCardProps => parseMission(mission, detailsFieldText, dateFieldText, readMoreText));
+): MissionFeedCardPropsBase[] {
+  return previousMissions.map((mission: PreviousMissionFromApi): MissionFeedCardPropsBase => parseMission(mission, detailsFieldText, dateFieldText, readMoreText));
 }
