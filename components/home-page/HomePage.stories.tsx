@@ -9,4 +9,4 @@ export default {
   }
 };
 
-export const HomePageStory = () => <HomePage welcomeButtonText="Start Exploring" welcomeHeaderText="Welcome to SpaceX Explorer"/>;
+export const HomePageStory = () => <HomePage onClickWelcomeButton={() => console.log('Welcome!')} welcomeButtonText="Start Exploring" welcomeHeaderText="Welcome to SpaceX Explorer"/>;
