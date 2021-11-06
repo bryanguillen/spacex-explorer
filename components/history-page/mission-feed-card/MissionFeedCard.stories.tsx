@@ -21,5 +21,6 @@ export const MissionFeedCardStory = () => (
     missionDetails={storyData.missionDetails}
     missionId={storyData.missionId}
     readMoreText={storyData.readMoreText}
+    onClickReadMore={() => undefined}
   />
 );
