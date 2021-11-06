@@ -4,14 +4,14 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import apolloClient from '../../config/apollo-client';
 import Head from 'next/head';
-import { MissionFeedCardProps } from '../../components/history-page/mission-feed-card/MissionFeedCard';
+import { MissionFeedCardPropsBase } from '../../components/history-page/mission-feed-card/MissionFeedCard';
 import HistoryPage from '../../components/history-page/HistoryPage';
 import content from '../../content/mock-cms.json';
 import { getNumberOfVisibleMissions, parsePreviousMissions } from '../../components/history-page/history-page-utils';
 import { useApp, useAppDispatch, Actions } from '../../state';
 
 const History: NextPage<{
-  missions: MissionFeedCardProps[],
+  missions: MissionFeedCardPropsBase[],
   pageHeader: string
 }> = ({
   missions,
