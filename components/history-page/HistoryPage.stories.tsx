@@ -36,5 +36,6 @@ export const HistoryPageStory = () => (
     getMoreMissions={() => console.log('getting more missions...')}
     missions={historyPageMockData}
     pageHeader="Past Missions"
+    onClick={() => undefined}
   />
 );
