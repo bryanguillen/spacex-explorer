@@ -4,7 +4,7 @@ import PageHeader from "../shared/page-header/PageHeader";
 
 import styles from './HistoryPage.module.css';
 
-export interface HistoryPageProps {
+interface HistoryPageProps {
   allMissionsVisible: boolean
   getMoreMissions(): void
   missions: MissionFeedCardPropsBase[]
