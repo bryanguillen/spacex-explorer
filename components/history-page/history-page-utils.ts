@@ -1,6 +1,10 @@
 import { MissionFeedCardPropsBase } from './mission-feed-card/MissionFeedCard';
 import parseUnixTimestamp from '../shared/utils/parse-unix-timestamp';
 
+/**
+ * @description Schema for what a previous mission looks like when returned from
+ * SpaceX API
+ */
 type PreviousMissionFromApi = {
   mission_name: string,
   details: string,
