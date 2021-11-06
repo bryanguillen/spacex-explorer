@@ -25,6 +25,10 @@ interface PastMissionFromApi {
   launch_date_unix: number
 }
 
+/**
+ * @description Interface for the content of a mission page that is the same
+ * for all mission pages (e.g. headers, field names like "Date: ")
+ */
 interface PastMissionStaticContent {
   fieldsSectionHeader: string
   date: string
