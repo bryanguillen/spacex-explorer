@@ -53,24 +53,30 @@ export const getStaticProps: GetStaticProps = async () => {
     readMoreText
   } = content.history;
 
-  
-  const { data } = await apolloClient.query({
-    query: gql`
-      query {
-        launchesPast {
-          id
-          launch_date_unix
-          details
-          mission_name
+  let launches;
+
+  try {
+    const { data } = await apolloClient.query({
+      query: gql`
+        query {
+          launchesPast {
+            id
+            launch_date_unix
+            details
+            mission_name
+          }
         }
-      }
-    `
-  });
+      `
+    });
+    launches = data.launchesPast;
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {
       pageHeader: header,
-      missions: parsePreviousMissions(data.launchesPast, detailsFieldText, dateFieldText, readMoreText)
+      missions: parsePreviousMissions(launches, detailsFieldText, dateFieldText, readMoreText)
     }
   };
 };
