@@ -5,6 +5,11 @@ import { AppProvider } from '../state';
 import AppTemplate from '../components/app-template/AppTemplate';
 import content from '../content/mock-cms.json';
 
+/**
+ * @description App component that wraps whatever component is mounted
+ * with app provider (to provide state) and app template (to provide
+ * layout support)
+ */
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const {
