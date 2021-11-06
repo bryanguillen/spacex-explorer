@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/dist/client/router';
 import { AppProvider } from '../state';
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </AppTemplate>
     </AppProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
