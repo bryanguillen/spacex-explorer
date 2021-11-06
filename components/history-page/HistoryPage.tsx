@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import MissionFeedCard, { MissionFeedCardProps } from "./mission-feed-card/MissionFeedCard";
+import MissionFeedCard, { MissionFeedCardPropsBase } from "./mission-feed-card/MissionFeedCard";
 import PageHeader from "../shared/page-header/PageHeader";
 
 import styles from './HistoryPage.module.css';
@@ -7,7 +7,7 @@ import styles from './HistoryPage.module.css';
 export interface HistoryPageProps {
   allMissionsVisible: boolean
   getMoreMissions(): void
-  missions: MissionFeedCardProps[]
+  missions: MissionFeedCardPropsBase[]
   pageHeader: string
   onClick(id: number): void 
 }
@@ -45,7 +45,7 @@ const HistoryPage = ({
         className={styles.header}
         value={pageHeader}
       />
-      {missions.map((mission: MissionFeedCardProps) => {
+      {missions.map((mission: MissionFeedCardPropsBase) => {
         const { readMoreText, missionDate, missionDetails, missionName, missionId } = mission;
         return (
           <MissionFeedCard
