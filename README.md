@@ -14,6 +14,17 @@ Now, rather than have a typical `README.md`, I actually went ahead and created a
 
 The app has been deployed using Netlify; see the app [here](https://zen-lumiere-da734a.netlify.app/).
 
+### Test
+
+#### Unit
+
+1. Run `npm run test components`
+
+#### E2E
+
+1. Run `cd tests-e2e`
+2. Run `npm run testcafe -- chrome *.test.js prod` (exclude prod for local) 
+
 ### Caution
 
 **Note: It seems like the API is out of date.  It works, but the data returned is from 2020 and earlier.  For the link, see the next section.**
