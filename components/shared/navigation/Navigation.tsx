@@ -15,6 +15,7 @@ export interface NavigationProps {
 
 interface NavigationButtonProps {
   icon: React.ReactNode
+  id: string // used for testing
   onClick: React.MouseEventHandler<HTMLDivElement>
   text: string
 }
@@ -24,11 +25,12 @@ interface NavigationButtonProps {
  */
 const NavigationButton = ({
   icon,
+  id,
   onClick,
   text
 }: NavigationButtonProps) => {
   return (
-    <div className={styles.button} role="button" onClick={onClick}>
+    <div className={styles.button} id={id} role="button" onClick={onClick}>
       {icon}
       <span className={`${styles.text} dark-mode-font-color`}>{text}</span>
     </div>
@@ -46,11 +48,13 @@ const Navigation = ({
       <div className={styles.navigation}>
         <NavigationButton
           icon={<MdHome/>}
+          id="navigation-button-home"
           onClick={onClickHome}
           text={homeButtonText}
         />
         <NavigationButton
           icon={<MdHistory/>}
+          id="navigation-button-history"
           onClick={onClickHistory}
           text={historyButtonText}
         />
