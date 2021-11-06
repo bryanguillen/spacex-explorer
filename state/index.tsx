@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, createContext, FC } from 'react'
+import React, { useReducer, useContext, createContext, FC } from 'react';
 
 /**
  * @description Module that contains the code associated to the
@@ -33,7 +33,7 @@ export const defaultAppState: AppStateI = {
   history: {
     numberOfVisibleMissions: 20
   }
-}
+};
 
 /**
  * @description Create both the state and dispatch contexts
@@ -53,7 +53,7 @@ export const reducer: React.Reducer<AppStateI, ActionI> = (state, action) => {
     default:
       return state;
   };
-}
+};
 
 /**
  * @description Wrapper for using within App.js -- avoids having to import both
