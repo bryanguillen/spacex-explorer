@@ -23,7 +23,7 @@ The app has been deployed using Netlify; see the app [here](https://zen-lumiere-
 #### E2E
 
 1. Run `cd tests-e2e`
-2. Run `npm run testcafe -- chrome *.test.js prod` (exclude prod for local) 
+2. Run `npm run testcafe` (exclude prod for local) 
 
 ### Caution
 
