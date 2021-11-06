@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const mission = parsePastMission(missions, id, content.mission);
 
   return {
-    props: { message: 'hello world', mission }
+    props: { mission }
   }
 };
 
