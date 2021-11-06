@@ -6,11 +6,11 @@ import truncateDetails from './truncate-details';
 import styles from './MissionFeedCard.module.css';
 
 /**
- * @description Interface used for the actual schema of all the data
- * needed to represent a mission feed card; meaning, no event handlers
- * or JSX attributes, as this interface is used for transforming data
- * from the back end via utility functions that do not need nor care
- * for the JSX related attributes.
+ * @description Interface used for the actual schema of the data consumed by
+ * a mission feed card, EXCLUDING JSX related props, like onClick or className.
+ * This is basically the result of transforming data from the back end, at which
+ * point, JSX related props are not needed.  See usage in utilities and
+ * in HistoryPage for examples of why this is used.
  */
 export interface MissionFeedCardPropsBase {
   missionName: string
