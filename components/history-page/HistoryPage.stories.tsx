@@ -1,10 +1,6 @@
 import React from 'react'
 import HistoryPage from './HistoryPage';
 
-/**
- * @TODO Add story for fetching more data
- */
-
 export default {
   title: 'Pages/HistoryPage',
   component: HistoryPage
