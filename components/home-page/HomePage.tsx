@@ -4,7 +4,7 @@ import PageHeader from '../shared/page-header/PageHeader';
 
 import styles from './HomePage.module.css';
 
-export interface HomePageProps {
+interface HomePageProps {
   onClickWelcomeButton: React.MouseEventHandler<HTMLButtonElement>
   welcomeButtonText: string
   welcomeHeaderText: string
