@@ -13,15 +13,25 @@ export interface NavigationProps {
   onClickHistory: React.MouseEventHandler<HTMLDivElement>
 }
 
-interface NavigationTextProps {
-  buttonText: string
+interface NavigationButtonProps {
+  icon: React.ReactNode
+  onClick: React.MouseEventHandler<HTMLDivElement>
+  text: string
 }
 
-const NavigationText = ({
-  buttonText
-}: NavigationTextProps) => {
+/**
+ * @description Wrapper for keeping code dry
+ */
+const NavigationButton = ({
+  icon,
+  onClick,
+  text
+}: NavigationButtonProps) => {
   return (
-    <span className={`${styles.text} dark-mode-font-color`}>{buttonText}</span>
+    <div className={styles.button} role="button" onClick={onClick}>
+      {icon}
+      <span className={`${styles.text} dark-mode-font-color`}>{text}</span>
+    </div>
   );
 };
 
@@ -34,18 +44,16 @@ const Navigation = ({
   return (
     <IconContext.Provider value={iconsStyles}>
       <div className={styles.navigation}>
-        <div className={styles.button} role="button" onClick={onClickHome}>
-          <MdHome/>
-          <NavigationText
-            buttonText={homeButtonText}
-          />
-        </div>
-        <div className={styles.button} role="button" onClick={onClickHistory}>
-          <MdHistory/>
-          <NavigationText
-            buttonText={historyButtonText}
-          />
-        </div>
+        <NavigationButton
+          icon={<MdHome/>}
+          onClick={onClickHome}
+          text={homeButtonText}
+        />
+        <NavigationButton
+          icon={<MdHistory/>}
+          onClick={onClickHistory}
+          text={historyButtonText}
+        />
       </div>
     </IconContext.Provider>
   );
