@@ -5,7 +5,13 @@ import truncateDetails from './truncate-details';
 
 import styles from './MissionFeedCard.module.css';
 
-// Exclude onClickReadMore + className; document why
+/**
+ * @description Interface used for the actual schema of all the data
+ * needed to represent a mission feed card; meaning, no event handlers
+ * or JSX attributes, as this interface is used for transforming data
+ * from the back end via utility functions that do not need nor care
+ * for the JSX related attributes
+ */
 export interface MissionFeedCardPropsBase {
   missionName: string
   missionDate: MissionTextFieldProps
@@ -14,6 +20,10 @@ export interface MissionFeedCardPropsBase {
   missionId: number
 }
 
+/**
+ * @description Interface used for the actual component; it contains what the
+ * interface above doesn't.
+ */
 export interface MissionFeedCardProps extends MissionFeedCardPropsBase {
   className?: string
   onClickReadMore: React.MouseEventHandler<HTMLButtonElement>
