@@ -10,7 +10,7 @@ import styles from './MissionFeedCard.module.css';
  * needed to represent a mission feed card; meaning, no event handlers
  * or JSX attributes, as this interface is used for transforming data
  * from the back end via utility functions that do not need nor care
- * for the JSX related attributes
+ * for the JSX related attributes.
  */
 export interface MissionFeedCardPropsBase {
   missionName: string
