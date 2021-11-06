@@ -5,13 +5,17 @@ import truncateDetails from './truncate-details';
 
 import styles from './MissionFeedCard.module.css';
 
-export interface MissionFeedCardProps {
-  className?: string
+// Exclude onClickReadMore + className; document why
+export interface MissionFeedCardPropsBase {
   missionName: string
   missionDate: MissionTextFieldProps
   missionDetails: MissionTextFieldProps
   readMoreText: string
   missionId: number
+}
+
+export interface MissionFeedCardProps extends MissionFeedCardPropsBase {
+  className?: string
   onClickReadMore: React.MouseEventHandler<HTMLButtonElement>
 }
 
