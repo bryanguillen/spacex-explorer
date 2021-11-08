@@ -17,8 +17,7 @@ const History: NextPage<{
   missions,
   pageHeader
 }) => {
-  const state = useApp();
-  const { history: { numberOfVisibleMissions } } = state;
+  const { history: { numberOfVisibleMissions } } = useApp();
   const dispatch = useAppDispatch();
   const router = useRouter();
 
